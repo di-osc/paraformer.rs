@@ -2,8 +2,10 @@
 name = "paraformer"
 version = "0.1.0"
 edition = "2024"
+description = "使用rust candle框架实现的paraformer推理"
 
 [dependencies]
+clap = { version = "4.5.38", features = ["derive"] }
 
 
 [[bin]]
