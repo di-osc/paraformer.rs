@@ -1,0 +1,11 @@
+[package]
+name = "paraformer"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+
+
+[[bin]]
+name = "paraformer"
+path = "src/main.rs"
