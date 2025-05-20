@@ -1,19 +1,18 @@
-use clap::{Subcommand, Parser, Args};
+use clap::{Args, Parser, Subcommand};
 
 #[derive(Parser)]
 #[command(author, version, about, long_about = None)]
 struct Cli {
-
     name: Option<String>,
 
     #[command(subcommand)]
-    command: Option<Commands>
+    command: Option<Commands>,
 }
 
 #[derive(Subcommand)]
-enum Commands  {
+enum Commands {
     /// Serve the application
-    Serve(ServeArgs)
+    Serve(ServeArgs),
 }
 
 #[derive(Args)]
@@ -23,9 +22,9 @@ struct ServeArgs {
     host: String,
     /// The port to bind to for serving.
     #[arg(short, long, default_value = "8080")]
-    port: u16
+    port: u16,
 }
 
 fn main() {
-    let cli = Cli::parse();
+    let _cli = Cli::parse();
 }
